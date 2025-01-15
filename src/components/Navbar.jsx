@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
+  const resumeUrl = useMemo(() => "https://legnf8lhda5w2xe4.public.blob.vercel-storage.com/Harshit_Bole%20-%20Resume-fATpHbHs9YknRX4hJbNH7SOdtcW6ac.pdf", []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const cool = process.env.VITE_VERCEL_BLOB_TOKEN;
+  // console.log(cool);
 
   const handleMenuToggle = () => {
     setIsMenuOpen((isMenuOpen) => {
       return !isMenuOpen;
     })
-  }
+  };
 
   return (
     <>
@@ -19,14 +22,19 @@ const Navbar = () => {
         
         <div className="flex justify-between items-center gap-12 text-white lg:flex xs:hidden">
           <a href='#about' className='text-xl text-white clash-display-bold'>About</a>
-          <a href='#projects' className='text-xl text-white clash-display-bold'>Projects</a>
+          {/* TODO: <a href='#projects' className='text-xl text-white clash-display-bold'>Projects</a> */}
           <a href='#experience' className='text-xl text-white clash-display-bold'>Experience</a>
           <a href='#contact' className='text-xl text-white clash-display-bold'>Contact</a>
         </div>
-        <div className="flex justify-between items-center gap-2 text-white cursor-pointer lg:flex xs:hidden">
+        <a
+          href={resumeUrl}
+          target="_blank"
+          download="Harshit_Bole_Resume.pdf"
+          className="flex justify-between items-center gap-2 text-white cursor-pointer lg:flex xs:hidden"
+        >
           <i className="fa-solid fa-download"></i>
           <span className='text-xl text-white clash-display-bold'>Resume</span>
-        </div>
+        </a>
         <motion.div
           key={isMenuOpen ? "open" : "close"}
           initial={{ scale: 0.5, rotate: -90, opacity: 0 }}
@@ -38,8 +46,8 @@ const Navbar = () => {
         >
           {
             isMenuOpen ?
-            <i class="fa-solid fa-x text-3xl"></i> :
-            <i class="fa-solid fa-bars text-3xl"></i>
+            <i className="fa-solid fa-x text-3xl"></i> :
+            <i className="fa-solid fa-bars text-3xl"></i>
           }
         </motion.div>
       </div>

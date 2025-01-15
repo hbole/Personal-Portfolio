@@ -4,6 +4,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Home from './components/Home';
 import Layout from './components/Layout';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <div>
           <Home />
           <About />
+          {/* TODO <Projects /> */}
+          <Experience />
           <Contact />
         </div>
       </Layout>
@@ -30,6 +34,7 @@ function App() {
           backgroundColor: 'var(--cursor-color)',
           mixBlendMode: 'exclusion'
         }}
+        className="lg:visible md:hidden"
       />
     </>
   )

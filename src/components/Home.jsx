@@ -5,9 +5,9 @@ const Home = () => {
     <div className="lg:py-28 lg:px-14 xs:py-10 xs:px-0 min-h-screen" id="home">
       <div className="flex lg:flex-row xs:flex-col justify-between items-center gap-12">
         <div className="lg:w-1/2 xs:w-full relative">
-          <span className="absolute -top-6 -left-6 beauty-demo text-yellow-400 text-7xl">I'm</span>
-          <p className="clash-display-bold text-white text-7xl">Harshit</p>
-          <p className="clash-display-bold text-white text-7xl">Bole</p>
+          <span className="absolute -top-6 -left-6 beauty-demo text-yellow-400 sm:text-7xl xs:text-5xl">I'm</span>
+          <p className="clash-display-bold text-white sm:text-7xl xs:text-4xl">Harshit</p>
+          <p className="clash-display-bold text-white sm:text-7xl xs:text-4xl">Bole</p>
 
           <div>
             <p className="clash-display-light text-white text-xl mt-4 leading-7 tracking-wide">

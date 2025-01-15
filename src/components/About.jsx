@@ -4,7 +4,7 @@ import TechStack from './TechStack'
 const About = () => {
   return (
     <div className="lg:py-28 lg:px-14 xs:py-10 xs:px-0 min-h-screen" id="about">
-      <p className="clash-display-bold text-white text-6xl">About Me</p>
+      <p className="clash-display-bold text-white sm:text-6xl xs:text-4xl">About Me</p>
 
       <div className="flex lg:flex-row xs:flex-col justify-start gap-10">
         <div className="lg:w-1/2 xs:w-full">
