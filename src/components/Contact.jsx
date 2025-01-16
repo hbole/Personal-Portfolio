@@ -4,7 +4,7 @@ import ContactMediums from './ContactMediums'
 
 const Contact = () => {
   return (
-    <div className="lg:py-28 lg:px-14 xs:py-10 xs:px-0 min-h-screen" id="contact">
+    <div className="lg:px-14 xs:py-28 xs:px-0 min-h-screen" id="contact">
       <p className="clash-display-bold text-white sm:text-6xl xs:text-4xl">Contact</p>
 
       <div className="flex lg:flex-row xs:flex-col-reverse justify-start py-5 lg:gap-5 xs:gap-8">

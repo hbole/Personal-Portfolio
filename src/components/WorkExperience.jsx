@@ -1,6 +1,7 @@
-import moment from 'moment'
-import React from 'react'
-import TechStackCard from './TechStackCard'
+import React from 'react';
+import moment from 'moment';
+import TechStackCard from './TechStackCard';
+import WorkExperienceInfo from './WorkExperienceInfo';
 
 const WorkExperience = ({ workExperience }) => {
   return (
@@ -18,8 +19,8 @@ const WorkExperience = ({ workExperience }) => {
           </div>
           <div className="flex justify-between items-center gap-3">
             {
-              workExperience?.techStack.map((techStack, index) => (
-                <TechStackCard key={index} techStack={techStack} />
+              workExperience?.techStack.map((techStack) => (
+                <TechStackCard key={techStack._id} techStack={techStack} />
                 ))
               }
           </div>
@@ -28,15 +29,7 @@ const WorkExperience = ({ workExperience }) => {
       <p className="my-4 lg:ml-16 sm:ml-24 xs:ml-0">
         {workExperience?.description}
       </p>
-
-      <div className="flex justify-end">
-        <button
-          type="submit"
-          className="flex justify-center items-center clash-display-bold text-lg p-4 h-10 text-black rounded-3xl outline-none resize-none tracking-wider bg-white"
-        >
-          Know More
-        </button>
-      </div>
+      <WorkExperienceInfo workExperience={workExperience} />
     </div>
   )
 }

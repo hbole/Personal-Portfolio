@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="lg:py-28 lg:px-14 xs:py-10 xs:px-0 min-h-screen" id="home">
+    <div className="lg:px-14 xs:py-14 xs:px-0 min-h-screen" id="home">
       <div className="flex lg:flex-row xs:flex-col justify-between items-center gap-12">
         <div className="lg:w-1/2 xs:w-full relative">
           <span className="absolute -top-6 -left-6 beauty-demo text-yellow-400 sm:text-7xl xs:text-5xl">I'm</span>

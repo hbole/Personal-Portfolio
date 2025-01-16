@@ -6,6 +6,16 @@
   --cursor-color: #fff;
   background-color: #060606;
   scroll-behavior: smooth;
+  --radix-overlay-z-index: 9999;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+ul li {
+  margin: 16px 0;
 }
 
 /* BeautyDemo font (Regular weight) */

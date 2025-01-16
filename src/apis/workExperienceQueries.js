@@ -9,6 +9,7 @@ export const FETCH_ALL_EXPERIENCES_QUERY = `*[_type == "workExperience"] | order
   location,
   isCurrent,
   techStack[]->{
+    _id,
     name,
     logoDark {
       asset -> {
