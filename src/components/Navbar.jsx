@@ -97,6 +97,15 @@ const Navbar = () => {
                 {/* TODO: <a href='#projects' className='text-xl text-white clash-display-bold'>Projects</a> */}
                 <a href='#experience' className='text-3xl text-white clash-display-bold' onClick={handleLinkClick}>Experience</a>
                 <a href='#contact' className='text-3xl text-white clash-display-bold' onClick={handleLinkClick}>Contact</a>
+                <a
+                  href={resumeUrl}
+                  target="_blank"
+                  download="Harshit_Bole_Resume.pdf"
+                  className="flex justify-start items-center gap-4 text-white cursor-pointer"
+                >
+                  <i className="text-2xl fa-solid fa-download"></i>
+                  <span className='text-3xl text-white clash-display-bold'>Resume</span>
+                </a>
               </div>
             </motion.div>
           }

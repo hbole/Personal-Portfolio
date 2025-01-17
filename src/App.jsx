@@ -11,9 +11,11 @@ import Layout from './components/Layout';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import { Toaster } from '@/components/ui/toaster';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 function App() {
   const queryClient = new QueryClient();
+  const isSmallScreen = useMediaQuery('(max-width: 920px)');
 
   return (
     <>
@@ -36,13 +38,14 @@ function App() {
           hasBlendMode={true}
           showSystemCursor={false}
           innerStyle={{
+            display: isSmallScreen ? 'hidden' : 'flow',
             backgroundColor: 'red'
           }}
           outerStyle={{
+            display: isSmallScreen ? 'hidden' : 'flow',
             backgroundColor: 'var(--cursor-color)',
             mixBlendMode: 'exclusion'
           }}
-          className="lg:visible md:hidden"
         />
         <Toaster />
       </QueryClientProvider>
