@@ -14,12 +14,6 @@ const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  console.log({
-    EMAILJS_PUBLIC_ID,
-    EMAILJS_SERVICE_ID,
-    EMAILJS_TEMPLATE_ID
-  })
-
   const handleNameChange = (e) => {
     setName(e.target.value)
   }
