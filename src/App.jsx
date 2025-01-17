@@ -11,11 +11,11 @@ import Layout from './components/Layout';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import { Toaster } from '@/components/ui/toaster';
-import useMediaQuery from '@/hooks/useMediaQuery';
+import useDeviceDetection from '@/hooks/use-device-detection';
 
 function App() {
   const queryClient = new QueryClient();
-  const isSmallScreen = useMediaQuery('(max-width: 920px)');
+  const device = useDeviceDetection();
 
   return (
     <>
@@ -29,24 +29,26 @@ function App() {
             <Contact />
           </div>
         </Layout>
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={40}
-          innerScale={1}
-          outerScale={1.4}
-          outerAlpha={0}
-          hasBlendMode={true}
-          showSystemCursor={false}
-          innerStyle={{
-            display: isSmallScreen ? 'hidden' : 'flow',
-            backgroundColor: 'red'
-          }}
-          outerStyle={{
-            display: isSmallScreen ? 'hidden' : 'flow',
-            backgroundColor: 'var(--cursor-color)',
-            mixBlendMode: 'exclusion'
-          }}
-        />
+        {
+          device === "Desktop" ?
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={40}
+            innerScale={1}
+            outerScale={1.4}
+            outerAlpha={0}
+            hasBlendMode={true}
+            showSystemCursor={false}
+            innerStyle={{
+              backgroundColor: 'red'
+            }}
+            outerStyle={{
+              backgroundColor: 'var(--cursor-color)',
+              mixBlendMode: 'exclusion'
+            }}
+          /> : null
+        }
+        
         <Toaster />
       </QueryClientProvider>
     </>
