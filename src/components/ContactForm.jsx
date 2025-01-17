@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useToast } from '@/hooks/use-toast';
 
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_PUBLIC_ID = import.meta.env.VITE_EMAILJS_PUBLIC_ID;
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
@@ -13,6 +13,12 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  console.log({
+    EMAILJS_PUBLIC_ID,
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID
+  })
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -52,7 +58,7 @@ const ContactForm = () => {
         EMAILJS_TEMPLATE_ID,
         payload,
         {
-          publicKey: EMAILJS_PUBLIC_KEY
+          publicKey: EMAILJS_PUBLIC_ID
         }
       );
       
