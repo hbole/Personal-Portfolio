@@ -2,7 +2,7 @@ import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
-  const resumeUrl = useMemo(() => "https://legnf8lhda5w2xe4.public.blob.vercel-storage.com/Harshit_Bole%20-%20Resume-fATpHbHs9YknRX4hJbNH7SOdtcW6ac.pdf", []);
+  const resumeUrl = useMemo(() => import.meta.env.VITE_RESUME_LINK, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const drawerRef = useRef(null);
 
